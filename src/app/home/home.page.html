@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      Rolar o Dado
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -9,12 +9,35 @@
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
+      <ion-title size="large">Role o Dado!</ion-title>
     </ion-toolbar>
   </ion-header>
-
+ 
   <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+    <ion-grid>    
+      
+      <ion-row class="ion-align-items-center">
+        <ion-col size="12">
+          <ion-item>
+            <ion-label #valor value='Ola' color="primary" style="text-align: center;">Você rolou o número {{valor.value}}</ion-label>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      
+        <ion-row class="ion-align-items-center">  
+          <ion-col size="12">  
+            <img [src]="image">
+          </ion-col>
+        </ion-row>
+
+      <ion-row class="ion-align-items-center">
+        <ion-col size="12">
+          <ion-button (click)="clicked(valor)" color="secondary" expand="block">Rolar!</ion-button>
+        </ion-col>
+      </ion-row>
+
+    </ion-grid>
+
+
   </div>
 </ion-content>
